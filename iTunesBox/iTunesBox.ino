@@ -36,7 +36,7 @@ void loop()
 // analogWrite(ledPin, lightLevel);  //write the value
   if(lightLevel > 170)
   { 
-     //playPause();
+     nextTrack();
   } 
 
   int duration, distance;
@@ -66,6 +66,13 @@ void playPause()
   Serial.print('A');
   analogWrite(ledPinRed, 255);
   delay(1000);
-  int readBack = Serial.read();
+  analogWrite(ledPinRed, 0);
+};
+
+void nextTrack()
+{
+ // Serial.print('B');
+  analogWrite(ledPinRed, 255);
+  delay(1000);
   analogWrite(ledPinRed, 0);
 };
