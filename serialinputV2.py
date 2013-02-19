@@ -9,7 +9,7 @@ while 1:
 	if val == "A"
 		os.system('''osascript -e 'tell application "iTunes" to playpause' ''')
 	else:
-		('Something else')
+		os.system('''osascript -e 'set sound volume to (sound volume - 25)' ''')
 s.close()
 
 
