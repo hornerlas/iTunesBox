@@ -5,8 +5,11 @@ import os
 s = serial.Serial('/dev/tty.usbmodem411', 9600)
 
 while 1:
-	s.read()
-	os.system('''osascript -e 'tell application "iTunes" to playpause' ''')
+	val = s.read()
+	if val == "A"
+		os.system('''osascript -e 'tell application "iTunes" to playpause' ''')
+	else:
+		('Something else')
 s.close()
 
 
